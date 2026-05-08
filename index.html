@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Servis Motor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cek Riwayat Servis</h2>
+        <div class="search-box">
+            <input type="text" id="nopolInput" placeholder="Masukkan No. Polisi (ex: B1234ABC)">
+            <button onclick="cariRiwayat()">Cari</button>
+        </div>
+
+        <div id="loading" class="hidden">Mencari data...</div>
+        
+        <div id="resultContainer"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
