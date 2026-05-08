@@ -14,7 +14,7 @@
         </div>
 
         <div id="inputSection" class="tab-content">
-            <h2>Input Servis Baru</h2>
+            <h2>Catat Servis Baru</h2>
             <form id="servisForm">
                 <input type="text" id="inNopol" placeholder="No. Polisi (ex: B1234ABC)" required>
                 <input type="text" id="inNama" placeholder="Nama Pemilik" required>
@@ -29,7 +29,7 @@
             <h2>Cek Riwayat Servis</h2>
             <div class="search-box">
                 <input type="text" id="nopolSearch" placeholder="Masukkan No. Polisi">
-                <button onclick="cariRiwayat()">Cari</button>
+                <button onclick="cariRiwayat()" id="btnCari">Cari</button>
             </div>
             <div id="loading" class="hidden">Memproses...</div>
             <div id="resultContainer"></div>
