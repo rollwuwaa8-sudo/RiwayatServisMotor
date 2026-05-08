@@ -3,20 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riwayat Servis Motor</title>
+    <title>Sistem Servis Motor</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h2>Cek Riwayat Servis</h2>
-        <div class="search-box">
-            <input type="text" id="nopolInput" placeholder="Masukkan No. Polisi (ex: B1234ABC)">
-            <button onclick="cariRiwayat()">Cari</button>
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('input')">Input Data</button>
+            <button class="tab-btn" onclick="openTab('cari')">Cek Riwayat</button>
         </div>
 
-        <div id="loading" class="hidden">Mencari data...</div>
-        
-        <div id="resultContainer"></div>
+        <div id="inputSection" class="tab-content">
+            <h2>Input Servis Baru</h2>
+            <form id="servisForm">
+                <input type="text" id="inNopol" placeholder="No. Polisi (ex: B1234ABC)" required>
+                <input type="text" id="inNama" placeholder="Nama Pemilik" required>
+                <input type="date" id="inTanggal" required>
+                <input type="number" id="inKM" placeholder="Kilometer (KM)" required>
+                <textarea id="inDetail" placeholder="Detail Pekerjaan / Servis" rows="3" required></textarea>
+                <button type="submit" id="btnSimpan">Simpan Data</button>
+            </form>
+        </div>
+
+        <div id="cariSection" class="tab-content hidden">
+            <h2>Cek Riwayat Servis</h2>
+            <div class="search-box">
+                <input type="text" id="nopolSearch" placeholder="Masukkan No. Polisi">
+                <button onclick="cariRiwayat()">Cari</button>
+            </div>
+            <div id="loading" class="hidden">Memproses...</div>
+            <div id="resultContainer"></div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
